@@ -140,7 +140,7 @@ for path, subdirs, files in os.walk(ws_path):
     for file in files:
         #NAME STUFF
         fname = ws_path+file
-        label = file.split('-')[1]
+        label = file.split('-')[1][-1]
 
         #COMPUTE STUFF
         pp = pp_col(fname)
@@ -153,6 +153,6 @@ for path, subdirs, files in os.walk(ws_path):
         pp_trans_for_print = (str(w) for w in pp_trans)
         upperp_for_print = (str(w) for w in upperp)
         lowerp_for_print = (str(w) for w in lowerp)
-        stuff =  label+', '+', '.join(pp_for_print)+', '.join(pp_trans_for_print)+', '.join(upperp_for_print)+', '.join(lowerp_for_print)
+        stuff =  label+', '+', '.join(pp_for_print)+', '+', '.join(pp_trans_for_print)+', '+', '.join(upperp_for_print)+', '+', '.join(lowerp_for_print)
         print 'file '+fname+' encoded'
         file_output.write(stuff)
