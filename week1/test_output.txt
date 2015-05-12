@@ -1,2 +1,0 @@
-result: 7,8
-accuracy: 0.0

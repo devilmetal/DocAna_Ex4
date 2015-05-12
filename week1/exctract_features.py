@@ -128,12 +128,12 @@ def normalize(x):
 # ------------------------- M A I N -------------------------#
 
 # Keywords
-ws_path = "images/test/"
+ws_path = "images/train/"
 # FILE TO PRINT STUFF IN
-file_output =  open('test.txt','wb')
+file_output =  open('train.txt','wb')
 file_output.write('')
 file_output.close()
-file_output = open('test.txt','ab')
+file_output = open('train.txt','ab')
 
 for path, subdirs, files in os.walk(ws_path):
     #checking files
@@ -153,6 +153,6 @@ for path, subdirs, files in os.walk(ws_path):
         pp_trans_for_print = (str(w) for w in pp_trans)
         upperp_for_print = (str(w) for w in upperp)
         lowerp_for_print = (str(w) for w in lowerp)
-        stuff =  label+', '+', '.join(pp_for_print)+', '+', '.join(pp_trans_for_print)+', '+', '.join(upperp_for_print)+', '+', '.join(lowerp_for_print)
+        stuff =  label+', '+', '.join(pp_for_print)+', '+', '.join(pp_trans_for_print)+', '+', '.join(upperp_for_print)+', '+', '.join(lowerp_for_print)+'\n'
         print 'file '+fname+' encoded'
         file_output.write(stuff)
