@@ -36,3 +36,4 @@ training file path: train_pv.txt
 test file path: test_pv.txt
 training log file path: results/results_pv/epochs/500n_10_l_001_e2_r1_train_output.txt
 test result file path: results/results_pv/epochs/500n_10_l_001_e2_r1_test_output.txt
+#epoch: 1 error: 0.15645576	time=250.386	mismatches: 32.728333
