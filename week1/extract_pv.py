@@ -42,12 +42,12 @@ def extract(fname):
 # file_output.close()
 # file_output = open('train_pv.txt','ab')
 
-ws_path = "images/test/"
+ws_path = "images/train/"
 # FILE TO PRINT STUFF IN
-file_output =  open('test_pv.txt','wb')
+file_output =  open('train_pv.txt','wb')
 file_output.write('')
 file_output.close()
-file_output = open('test_pv.txt','ab')
+file_output = open('train_pv.txt','ab')
 
 for path, subdirs, files in os.walk(ws_path):
     #checking files

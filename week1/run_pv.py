@@ -3,60 +3,60 @@ import os
 from subprocess import call
 import random
 
-neurons = [100, 200, 500, 800, 1000, 1500]
+neurons = [1,2,5,10,25,50,100, 200, 500, 800, 1000, 1500]
 epochs = [1, 2, 5, 8, 10, 25, 50, 100]
-learning_rate = [0.0001, 0.001, 0.01, 0.1]
+learning_rate = [0.8,0.5,0.2,0.1,0.08,0.05,0.01,0.008,0.005,0.001,0.0001]
 training_samples = [20, 100, 1000, 2000, 5000, 10000]
 runs = 2
 
-
+'''
 # # VARYING THE NUMBER OF NEURONS
-# for neuron in neurons:
-#     for run in range(runs):
-#         fn = "results_pv/neurons/"+str(neuron)+ "n_10_l_001_e10_r"+str(run+1)
-#         # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n " +str(neuron)+ " -o 10 -l 0.001 -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
-#         call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n " +str(neuron)+ " -o 10 -l 0.001 -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
-#         print "-----------------------------------------------------------------------------"
-#         print "   run " +str(run+1)+ " with " +str(neuron)+ " neurons DONE."
-#         print "-----------------------------------------------------------------------------"
-#
+for neuron in neurons:
+    for run in range(1):
+        fn = "results/results_pv/neurons/"+str(neuron)+ "n_10_l_001_e10_r"+str(run+1)
+        #print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n " +str(neuron)+ " -o 10 -l 0.001 -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
+        call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n " +str(neuron)+ " -o 10 -l 0.001 -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
+        print "-----------------------------------------------------------------------------"
+        print "   run " +str(run+1)+ " with " +str(neuron)+ " neurons DONE."
+        print "-----------------------------------------------------------------------------"
+'''
 # # VARYING THE NUMBER OF EPOCHS
-# for epoch in epochs:
-#     for run in range(runs):
-#         fn = "results_pv/epochs/500n_10_l_001_e" +str(epoch)+ "_r"+str(run+1)
-#         # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e " +str(epoch)+ " train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
-#         call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e " +str(epoch)+ " train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
-#         print "-----------------------------------------------------------------------------"
-#         print "   run " +str(run+1)+ " with " +str(epoch)+ " epochs DONE"
-#         print "-----------------------------------------------------------------------------"
+for epoch in epochs:
+    for run in range(runs):
+        fn = "results/results_pv/epochs/500n_10_l_001_e" +str(epoch)+ "_r"+str(run+1)
+        # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e " +str(epoch)+ " train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
+        call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e " +str(epoch)+ " train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
+        print "-----------------------------------------------------------------------------"
+        print "   run " +str(run+1)+ " with " +str(epoch)+ " epochs DONE"
+        print "-----------------------------------------------------------------------------"
 #
 # # VARYING THE LEARNING RATE
-# for lr in learning_rate:
-#     for run in range(runs):
-#         fn = "results_pv/learning_rate/500n_10_l_"+str(lr).split('.')[1]+"_e10_r"+str(run+1)
-#         # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l "+str(lr)+" -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
-#         call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l "+str(lr)+" -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
-#         print "-----------------------------------------------------------------------------"
-#         print "   run " +str(run+1)+ " with learning rate of " +str(lr)+ " DONE"
-#         print "-----------------------------------------------------------------------------"
+for lr in learning_rate:
+    for run in range(runs):
+        fn = "results/results_pv/learning_rate/500n_10_l_"+str(lr).split('.')[1]+"_e10_r"+str(run+1)
+        # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l "+str(lr)+" -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
+        call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l "+str(lr)+" -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
+        print "-----------------------------------------------------------------------------"
+        print "   run " +str(run+1)+ " with learning rate of " +str(lr)+ " DONE"
+        print "-----------------------------------------------------------------------------"
 
 # VARYING THE NUMBER OF TRAINING SAMPLES
 for ts in training_samples:
     new_file = open('train_pv_'+str(ts)+'.txt','ab')
     '''Creating the samples'''
-    # new_file = open('train_pv_'+str(ts)+'.txt','wb')
-    # file = open('train_pv.txt','rb')
-    # lines = random.sample(xrange(60000), ts)
-    # for i, line in enumerate(file):
-    #     if i in lines:
-    #         new_file.write(line)
-    # file.close()
-    # new_file.close()
+    new_file = open('train_pv_'+str(ts)+'.txt','wb')
+    file = open('train_pv.txt','rb')
+    lines = random.sample(xrange(60000), ts)
+    for i, line in enumerate(file):
+        if i in lines:
+            new_file.write(line)
+    file.close()
+    new_file.close()
 
     for run in range(runs):
-        fn = "results_pv/samples/500n_10_l_001_e10_s" +str(ts)+ "r"+str(run+1)
-        # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
-        call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
-        print "-----------------------------------------------------------------------------"
-        print "   run " +str(run+1)+ " with " +str(ts)+ " training samples DONE"
-        print "-----------------------------------------------------------------------------"
+       fn = "results_pv/samples/500n_10_l_001_e10_s" +str(ts)+ "r"+str(run+1)
+       print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
+       call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
+       print "-----------------------------------------------------------------------------"
+       print "   run " +str(run+1)+ " with " +str(ts)+ " training samples DONE"
+       print "-----------------------------------------------------------------------------"

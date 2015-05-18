@@ -1,0 +1,38 @@
+activation function: SIGMOID
+feature size: 784
+neurons: 500
+output size: 10
+learning rate: 0.001
+epochs: 1
+training file path: train_pv.txt
+test file path: test_pv.txt
+training log file path: results/results_pv/epochs/500n_10_l_001_e1_r1_train_output.txt
+test result file path: results/results_pv/epochs/500n_10_l_001_e1_r1_test_output.txt
+#epoch: 1 error: 0.15648484	time=233.917	mismatches: 35.18
+Training finished.
+accuracy: 0.7656
+Done.
+activation function: SIGMOID
+feature size: 784
+neurons: 500
+output size: 10
+learning rate: 0.001
+epochs: 1
+training file path: train_pv.txt
+test file path: test_pv.txt
+training log file path: results/results_pv/epochs/500n_10_l_001_e1_r2_train_output.txt
+test result file path: results/results_pv/epochs/500n_10_l_001_e1_r2_test_output.txt
+#epoch: 1 error: 0.15700923	time=213.007	mismatches: 34.331665
+Training finished.
+accuracy: 0.7791
+Done.
+activation function: SIGMOID
+feature size: 784
+neurons: 500
+output size: 10
+learning rate: 0.001
+epochs: 2
+training file path: train_pv.txt
+test file path: test_pv.txt
+training log file path: results/results_pv/epochs/500n_10_l_001_e2_r1_train_output.txt
+test result file path: results/results_pv/epochs/500n_10_l_001_e2_r1_test_output.txt
