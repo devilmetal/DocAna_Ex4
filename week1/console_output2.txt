@@ -37,3 +37,27 @@ test file path: test_pv.txt
 training log file path: results/results_pv/epochs/500n_10_l_001_e2_r1_train_output.txt
 test result file path: results/results_pv/epochs/500n_10_l_001_e2_r1_test_output.txt
 #epoch: 1 error: 0.15645576	time=250.386	mismatches: 32.728333
+#epoch: 2 error: 0.15091492	time=265.58	mismatches: 21.106667
+Training finished.
+accuracy: 0.8135
+Done.
+activation function: SIGMOID
+feature size: 784
+neurons: 500
+output size: 10
+learning rate: 0.001
+epochs: 2
+training file path: train_pv.txt
+test file path: test_pv.txt
+training log file path: results/results_pv/epochs/500n_10_l_001_e2_r2_train_output.txt
+test result file path: results/results_pv/epochs/500n_10_l_001_e2_r2_test_output.txt
+#epoch: 1 error: 0.15664387	time=221.83	mismatches: 34.165
+-----------------------------------------------------------------------------
+   run 1 with 1 epochs DONE
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+   run 2 with 1 epochs DONE
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+   run 1 with 2 epochs DONE
+-----------------------------------------------------------------------------
