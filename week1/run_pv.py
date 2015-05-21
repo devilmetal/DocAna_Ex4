@@ -3,12 +3,13 @@ import os
 from subprocess import call
 import random
 
-<<<<<<< HEAD
+
 neurons = [1,2,5,10,25,50,100, 200, 500, 800, 1000, 1500]
 epochs = [1, 2, 5, 8, 10, 25, 50, 100]
 learning_rate = [0.8,0.5,0.2,0.1,0.08,0.05,0.01,0.008,0.005,0.001,0.0001]
-training_samples = [20, 100, 1000, 2000, 5000, 10000]
-runs = 2
+#training_samples = [20, 100, 1000, 2000, 5000, 10000]
+training_samples = [10000]
+runs = 1
 
 '''
 # # VARYING THE NUMBER OF NEURONS
@@ -20,7 +21,7 @@ for neuron in neurons:
         print "-----------------------------------------------------------------------------"
         print "   run " +str(run+1)+ " with " +str(neuron)+ " neurons DONE."
         print "-----------------------------------------------------------------------------"
-'''
+
 # # VARYING THE NUMBER OF EPOCHS
 for epoch in epochs:
     for run in range(runs):
@@ -42,6 +43,7 @@ for lr in learning_rate:
         print "-----------------------------------------------------------------------------"
 
 # VARYING THE NUMBER OF TRAINING SAMPLES
+'''
 count = [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
 
 '''Creating the samples'''
@@ -120,10 +122,9 @@ for ts in training_samples:
         # print "java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt"
         # call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 500 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
         if ts != 60000:
-            call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 25 -o 10 -l 0.001 -e 10 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
+            call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 25 -o 10 -l 0.001 -e 5000 train_pv_" +str(ts)+ ".txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
         else:
-            call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 25 -o 10 -l 0.001 -e 10 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
+            call("java -jar -Xmx1024m NN_Tool.jar -a SIGMOID -f 784 -n 25 -o 10 -l 0.001 -e 5 train_pv.txt test_pv.txt " +fn+ "_train_output.txt " +fn+ "_test_output.txt", shell=True)
         print "-----------------------------------------------------------------------------"
         print "   run " +str(run+1)+ " with " +str(ts)+ " training samples DONE"
         print "-----------------------------------------------------------------------------"
->>>>>>> fd2e8ce728a00b910fbd23fc9bb049acabfdc0d1
