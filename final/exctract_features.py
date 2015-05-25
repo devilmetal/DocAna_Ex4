@@ -127,7 +127,13 @@ def normalize(x):
 
 # ------------------------- M A I N -------------------------#
 
-# Keywords
+# ws_path = "images/test/"
+# # FILE TO PRINT STUFF IN
+# file_output =  open('test.txt','wb')
+# file_output.write('')
+# file_output.close()
+# file_output = open('test.txt','ab')
+
 ws_path = "images/train/"
 # FILE TO PRINT STUFF IN
 file_output =  open('train.txt','wb')
